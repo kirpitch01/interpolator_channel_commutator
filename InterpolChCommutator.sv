@@ -60,13 +60,9 @@ parameter num_of_ch = 4
     genvar k;
     generate   for (k = 0 ; k < num_of_ch; k = k +1)
             begin 
-//                always_comb    
-//                if (cnt == k)
-////                data_out = data_reg[(data_width * (num_of_ch - k)) -1: data_width*(num_of_ch - k -1)];
-//                data_out = data_reg[(data_width * (k+1)) -1: data_width*(k)];
+
               always @(posedge clk)    
                 if (cnt == k)
-//                data_out = data_reg[(data_width * (num_of_ch - k)) -1: data_width*(num_of_ch - k -1)];
                 data_out <= data_reg[(data_width * (k+1)) -1: data_width*(k)];
         end
     
