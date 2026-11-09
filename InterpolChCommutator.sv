@@ -37,10 +37,7 @@ parameter num_of_ch = 4
     reg [  $clog2(num_of_ch)-1:0 ]cnt =  { $clog2( num_of_ch ){1'b0}};
     reg [( data_width * num_of_ch )- 1 : 0  ] data_reg;
     reg first_valid = 1'b0;
-//    integer k;
 
-
-// assign data_out = data_reg[(data_width * cnt +1) -1: data_width*(cnt)];
     always @(posedge clk)
         begin
         cnt <= cnt + 1;
